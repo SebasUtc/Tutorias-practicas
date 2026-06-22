@@ -23,3 +23,15 @@ def cart(request):
    return render(request, 'cart.html')
 def error(request):
    return render(request, 'error.html')
+def login(request):
+    if request.method == 'POST':
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(request, username=username, password=password)
+        if user is not None:
+            auth_login(request, user)
+            # Mandamos directo a la ruta base de la otra app
+            return redirect('/dashboard2/') 
+        else:
+            messages.error(request, 'Invalid username or password.')
+    return render(request, 'login.html')

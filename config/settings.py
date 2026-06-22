@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Inicio',
+    'dashboard2',
 ]
 
 MIDDLEWARE = [
@@ -124,6 +125,9 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATIC_URL = 'static/'
 STATICFILES_DIRS=[
-    BASE_DIR / 'Inicio/static',
-    BASE_DIR / 'templates' / 'static'/ 'private' ,
+    BASE_DIR / 'Inicio/static','dashboard2/static',
+    BASE_DIR / 'Inicio/static/css','dashboard2/static/private/assets/css',
+    BASE_DIR / 'Inicio/static/js','dashboard2/static/private/assets/js',
+    BASE_DIR / 'Inicio/static/images','dashboard2/static/private/assets/images'
+    ,
 ]

@@ -12,4 +12,6 @@ urlpatterns = [
     path('single/', views.single, name='single'),
     path('cart/', views.cart, name='cart'),
     path('error/', views.error, name='error'),
+   
+    path('login/', views.login, name='login'),
 ]
